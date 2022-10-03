@@ -1,0 +1,130 @@
+.app{
+    height: 100vh;
+}
+
+.background_1{
+    background-color: aliceblue;
+    position: relative;
+    padding: 2rem 0;
+    height: 25%;
+}
+
+.background_2{
+    background: #e6eff7;
+    height: 75%;
+}
+
+.heading{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.input{
+    position: absolute;
+    left: 50%;
+    bottom: -25%;
+    transform: translateX(-50%);
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 1rem;
+    background: antiquewhite;
+    border: 1px solid;
+}
+
+.input__box{
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.input__submit{
+    background: white;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: inset 0px 0px 2px 1px palevioletred;
+    padding: 0.5rem;
+    transition: all .3s ease;
+}
+
+.input__submit:active{
+    box-shadow: inset 0px 0px 2px 2px palevioletred;
+    transform: scale(.8);
+    transition: all .3s ease;
+}
+
+.singleTodo{
+    width: 500px;
+    padding: 1rem;
+    background-color: burlywood;
+}
+
+.singleTodo__form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.singleTodo__form s, .singleTodo__form span {
+    flex: .7;
+    overflow-x: auto;
+}
+
+.singleTodo__divider{
+    width: 2px;
+    background-color: gray;
+    align-self: stretch;
+}
+
+.singleTodo__actions{
+    text-align: center;
+    flex: .2;
+}
+
+.singleTodo__actions i {
+    margin-right: .2rem;
+    cursor: pointer;
+}
+
+.todoList{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+    padding-top: 3rem;
+    width: 95%;
+    flex-direction: column;
+    margin: auto;
+}
+
+.todoList > div{
+    width: 100%;
+}
+
+.todoList div:nth-child(1) h2{
+    color: white;
+    filter: drop-shadow(0px 1px 2px black);
+}
+
+.todoList div:nth-child(2) h2{
+    color: white;
+    filter: drop-shadow(0px 1px 2px green);
+}
+
+.todoList div h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+@media(min-width: 600px) {
+    .input{
+        width: fit-content;
+        padding: 1rem 2rem;
+    }
+    .todoList{
+        flex-direction: row;
+    }
+    .todoList > div {
+        width: 50%;
+    }
+}
